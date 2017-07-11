@@ -1,26 +1,81 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="k9z-Df-Yhx">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--List Table View Controller-->
+        <scene sceneID="SMw-l4-mf7">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="k9z-Df-Yhx" customClass="OMGListTableViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="k3n-se-7wm"/>
+                        <viewControllerLayoutGuide type="bottom" id="e3z-Qb-3Lb"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="h2j-4i-MPD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BtK-9S-FIq">
+                                <rect key="frame" x="0.0" y="20" width="375" height="597"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="k9z-Df-Yhx" id="589-Gp-mRz"/>
+                                    <outlet property="delegate" destination="k9z-Df-Yhx" id="jMF-tf-cVi"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="noo-eh-XkL" customClass="EAMiniAudioPlayerView">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="itt-SN-kIL"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BdG-Wy-2ND">
+                                <rect key="frame" x="142" y="628" width="53" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="-10SEC "/>
+                                <connections>
+                                    <action selector="tenSecBack:" destination="k9z-Df-Yhx" eventType="touchUpInside" id="xR8-3y-1bm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="89t-fT-rm7">
+                                <rect key="frame" x="70" y="628" width="55" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="+10SEC "/>
+                                <connections>
+                                    <action selector="tenSecForward:" destination="k9z-Df-Yhx" eventType="touchUpInside" id="moe-SI-XdT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BtK-9S-FIq" firstAttribute="leading" secondItem="h2j-4i-MPD" secondAttribute="leading" id="5JE-AH-Zrn"/>
+                            <constraint firstItem="noo-eh-XkL" firstAttribute="leading" secondItem="h2j-4i-MPD" secondAttribute="leading" id="7XG-Y7-Tl3"/>
+                            <constraint firstItem="e3z-Qb-3Lb" firstAttribute="top" secondItem="BtK-9S-FIq" secondAttribute="bottom" constant="50" id="FZh-uW-axA"/>
+                            <constraint firstItem="e3z-Qb-3Lb" firstAttribute="top" secondItem="BdG-Wy-2ND" secondAttribute="bottom" constant="10" id="Mw0-lx-8gF"/>
+                            <constraint firstItem="BtK-9S-FIq" firstAttribute="top" secondItem="k3n-se-7wm" secondAttribute="bottom" id="Obw-xg-2io"/>
+                            <constraint firstItem="e3z-Qb-3Lb" firstAttribute="top" secondItem="89t-fT-rm7" secondAttribute="bottom" constant="10" id="R0Q-f2-rot"/>
+                            <constraint firstItem="89t-fT-rm7" firstAttribute="leading" secondItem="h2j-4i-MPD" secondAttribute="leading" constant="70" id="TpV-CS-tRe"/>
+                            <constraint firstAttribute="trailing" secondItem="noo-eh-XkL" secondAttribute="trailing" id="doz-KS-GLF"/>
+                            <constraint firstItem="BdG-Wy-2ND" firstAttribute="leading" secondItem="89t-fT-rm7" secondAttribute="trailing" constant="17" id="gLk-BS-d85"/>
+                            <constraint firstAttribute="trailing" secondItem="BtK-9S-FIq" secondAttribute="trailing" id="hTG-p5-dxW"/>
+                            <constraint firstItem="e3z-Qb-3Lb" firstAttribute="top" secondItem="noo-eh-XkL" secondAttribute="bottom" id="rD3-QE-uSG"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="playerView" destination="noo-eh-XkL" id="PpN-0c-APH"/>
+                        <outlet property="tableView" destination="BtK-9S-FIq" id="Si9-Dx-UHg"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aI1-Gv-N3q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-1481" y="-548"/>
         </scene>
     </scenes>
 </document>

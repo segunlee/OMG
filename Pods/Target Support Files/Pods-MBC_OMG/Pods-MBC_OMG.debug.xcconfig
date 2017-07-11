@@ -1,0 +1,8 @@
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/EAMiniAudioPlayerView" "${PODS_ROOT}/Headers/Public/Realm" "${PODS_ROOT}/Headers/Public/StreamingKit" "${PODS_ROOT}/Headers/Public/Toast"
+LIBRARY_SEARCH_PATHS = $(inherited) "$PODS_CONFIGURATION_BUILD_DIR/EAMiniAudioPlayerView" "$PODS_CONFIGURATION_BUILD_DIR/Realm" "$PODS_CONFIGURATION_BUILD_DIR/StreamingKit" "$PODS_CONFIGURATION_BUILD_DIR/Toast" $(inherited) "${PODS_ROOT}/Realm/core"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/EAMiniAudioPlayerView" -isystem "${PODS_ROOT}/Headers/Public/Realm" -isystem "${PODS_ROOT}/Headers/Public/StreamingKit" -isystem "${PODS_ROOT}/Headers/Public/Toast"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"EAMiniAudioPlayerView" -l"Realm" -l"StreamingKit" -l"Toast" -l"c++" -l"realm-ios" -l"z" -framework "AudioToolbox" -framework "CFNetwork" -framework "CoreFoundation" -framework "QuartzCore" -framework "SystemConfiguration" -framework "UIKit"
+PODS_BUILD_DIR = $BUILD_DIR
+PODS_CONFIGURATION_BUILD_DIR = $PODS_BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
+PODS_ROOT = ${SRCROOT}/Pods

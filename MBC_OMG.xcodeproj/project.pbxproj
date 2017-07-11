@@ -9,23 +9,33 @@
 /* Begin PBXBuildFile section */
 		672ADB5C1E78DF310080FCCF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 672ADB5B1E78DF310080FCCF /* main.m */; };
 		672ADB5F1E78DF310080FCCF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 672ADB5E1E78DF310080FCCF /* AppDelegate.m */; };
-		672ADB621E78DF310080FCCF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 672ADB611E78DF310080FCCF /* ViewController.m */; };
 		672ADB651E78DF310080FCCF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 672ADB631E78DF310080FCCF /* Main.storyboard */; };
 		672ADB671E78DF310080FCCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 672ADB661E78DF310080FCCF /* Assets.xcassets */; };
 		672ADB6A1E78DF310080FCCF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 672ADB681E78DF310080FCCF /* LaunchScreen.storyboard */; };
+		672ADB731E78DFFF0080FCCF /* OMGListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 672ADB721E78DFFF0080FCCF /* OMGListTableViewController.m */; };
+		672ADB761E78E1EA0080FCCF /* OMGModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 672ADB751E78E1EA0080FCCF /* OMGModel.m */; };
+		672ADB791E78E4090080FCCF /* NSDate+OMG.m in Sources */ = {isa = PBXBuildFile; fileRef = 672ADB781E78E4090080FCCF /* NSDate+OMG.m */; };
+		E3B854A62529795C256FCE01 /* libPods-MBC_OMG.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B53881D05003C66C5814966 /* libPods-MBC_OMG.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A9DF0196874AC1D8E613F3A /* Pods-MBC_OMG.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MBC_OMG.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MBC_OMG/Pods-MBC_OMG.debug.xcconfig"; sourceTree = "<group>"; };
+		2CB2A81D3AD4926D101FD544 /* Pods-MBC_OMG.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MBC_OMG.release.xcconfig"; path = "Pods/Target Support Files/Pods-MBC_OMG/Pods-MBC_OMG.release.xcconfig"; sourceTree = "<group>"; };
 		672ADB571E78DF310080FCCF /* MBC_OMG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MBC_OMG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		672ADB5B1E78DF310080FCCF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		672ADB5D1E78DF310080FCCF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		672ADB5E1E78DF310080FCCF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		672ADB601E78DF310080FCCF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		672ADB611E78DF310080FCCF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		672ADB641E78DF310080FCCF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		672ADB661E78DF310080FCCF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		672ADB691E78DF310080FCCF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		672ADB6B1E78DF310080FCCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		672ADB711E78DFFF0080FCCF /* OMGListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OMGListTableViewController.h; sourceTree = "<group>"; };
+		672ADB721E78DFFF0080FCCF /* OMGListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OMGListTableViewController.m; sourceTree = "<group>"; };
+		672ADB741E78E1EA0080FCCF /* OMGModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OMGModel.h; sourceTree = "<group>"; };
+		672ADB751E78E1EA0080FCCF /* OMGModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OMGModel.m; sourceTree = "<group>"; };
+		672ADB771E78E4090080FCCF /* NSDate+OMG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+OMG.h"; sourceTree = "<group>"; };
+		672ADB781E78E4090080FCCF /* NSDate+OMG.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+OMG.m"; sourceTree = "<group>"; };
+		9B53881D05003C66C5814966 /* libPods-MBC_OMG.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MBC_OMG.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +43,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3B854A62529795C256FCE01 /* libPods-MBC_OMG.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		52A7CE3E9B4525D165592C3E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9B53881D05003C66C5814966 /* libPods-MBC_OMG.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		672ADB4E1E78DF310080FCCF = {
 			isa = PBXGroup;
 			children = (
 				672ADB591E78DF310080FCCF /* MBC_OMG */,
 				672ADB581E78DF310080FCCF /* Products */,
+				F89A43A28DD4505BB6191ABD /* Pods */,
+				52A7CE3E9B4525D165592C3E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,8 +81,12 @@
 			children = (
 				672ADB5D1E78DF310080FCCF /* AppDelegate.h */,
 				672ADB5E1E78DF310080FCCF /* AppDelegate.m */,
-				672ADB601E78DF310080FCCF /* ViewController.h */,
-				672ADB611E78DF310080FCCF /* ViewController.m */,
+				672ADB741E78E1EA0080FCCF /* OMGModel.h */,
+				672ADB751E78E1EA0080FCCF /* OMGModel.m */,
+				672ADB711E78DFFF0080FCCF /* OMGListTableViewController.h */,
+				672ADB721E78DFFF0080FCCF /* OMGListTableViewController.m */,
+				672ADB771E78E4090080FCCF /* NSDate+OMG.h */,
+				672ADB781E78E4090080FCCF /* NSDate+OMG.m */,
 				672ADB631E78DF310080FCCF /* Main.storyboard */,
 				672ADB661E78DF310080FCCF /* Assets.xcassets */,
 				672ADB681E78DF310080FCCF /* LaunchScreen.storyboard */,
@@ -79,6 +104,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F89A43A28DD4505BB6191ABD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1A9DF0196874AC1D8E613F3A /* Pods-MBC_OMG.debug.xcconfig */,
+				2CB2A81D3AD4926D101FD544 /* Pods-MBC_OMG.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +120,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 672ADB6E1E78DF310080FCCF /* Build configuration list for PBXNativeTarget "MBC_OMG" */;
 			buildPhases = (
+				3143158C48B07CCA8412D16A /* [CP] Check Pods Manifest.lock */,
 				672ADB531E78DF310080FCCF /* Sources */,
 				672ADB541E78DF310080FCCF /* Frameworks */,
 				672ADB551E78DF310080FCCF /* Resources */,
+				03BBE9F8BE9187A988CC4DBB /* [CP] Embed Pods Frameworks */,
+				93DBB99C5A4D1A0BF8848AE3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -105,12 +142,19 @@
 		672ADB4F1E78DF310080FCCF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = OMG;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = SegunLee;
 				TargetAttributes = {
 					672ADB561E78DF310080FCCF = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = P4BDJKG9NM;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -145,14 +189,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		03BBE9F8BE9187A988CC4DBB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MBC_OMG/Pods-MBC_OMG-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3143158C48B07CCA8412D16A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		93DBB99C5A4D1A0BF8848AE3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MBC_OMG/Pods-MBC_OMG-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		672ADB531E78DF310080FCCF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				672ADB621E78DF310080FCCF /* ViewController.m in Sources */,
 				672ADB5F1E78DF310080FCCF /* AppDelegate.m in Sources */,
+				672ADB761E78E1EA0080FCCF /* OMGModel.m in Sources */,
+				672ADB791E78E4090080FCCF /* NSDate+OMG.m in Sources */,
 				672ADB5C1E78DF310080FCCF /* main.m in Sources */,
+				672ADB731E78DFFF0080FCCF /* OMGListTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,8 +362,10 @@
 		};
 		672ADB6F1E78DF310080FCCF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A9DF0196874AC1D8E613F3A /* Pods-MBC_OMG.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = P4BDJKG9NM;
 				INFOPLIST_FILE = MBC_OMG/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "SGIOS.MBC-OMG";
@@ -279,8 +375,10 @@
 		};
 		672ADB701E78DF310080FCCF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2CB2A81D3AD4926D101FD544 /* Pods-MBC_OMG.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = P4BDJKG9NM;
 				INFOPLIST_FILE = MBC_OMG/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "SGIOS.MBC-OMG";
@@ -307,6 +405,7 @@
 				672ADB701E78DF310080FCCF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

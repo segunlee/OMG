@@ -285,9 +285,7 @@
 - (void)dataCreate {
     if ([[OMGModel allObjects] count] > 0) {
         Toast(@"Data has");
-        [_realm beginWriteTransaction];
-        [_realm deleteAllObjects];
-        [_realm commitWriteTransaction];
+        return;
     }
     
     /*

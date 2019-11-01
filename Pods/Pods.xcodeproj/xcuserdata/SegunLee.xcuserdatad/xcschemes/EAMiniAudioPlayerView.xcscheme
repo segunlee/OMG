@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0700"
+   LastUpgradeVersion = "0930"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -13,11 +13,11 @@
             buildForProfiling = "YES"
             buildForArchiving = "YES">
             <BuildableReference
-               BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '58CC6762687608C3A97D9C51F07D8AD5'
-               BlueprintName = 'EAMiniAudioPlayerView'
-               ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libEAMiniAudioPlayerView.a'>
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "EB4638C2F665C3B2DB34695749272C5C"
+               BlueprintName = "EAMiniAudioPlayerView"
+               ReferencedContainer = "container:Pods.xcodeproj"
+               BuildableName = "libEAMiniAudioPlayerView.a">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

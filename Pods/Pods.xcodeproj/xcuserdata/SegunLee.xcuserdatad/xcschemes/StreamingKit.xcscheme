@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0700"
+   LastUpgradeVersion = "0930"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -13,11 +13,11 @@
             buildForProfiling = "YES"
             buildForArchiving = "YES">
             <BuildableReference
-               BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '1AE36A5657EB2EF9461B89F1B2DF3E8B'
-               BlueprintName = 'StreamingKit'
-               ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libStreamingKit.a'>
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "751FB5C76523EF4508FDC910DB0F3819"
+               BlueprintName = "StreamingKit"
+               ReferencedContainer = "container:Pods.xcodeproj"
+               BuildableName = "libStreamingKit.a">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

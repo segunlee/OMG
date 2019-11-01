@@ -31,6 +31,10 @@
     [formatter setLocale:[NSLocale currentLocale]];
     [formatter setDateFormat:@"yyyyMMdd"];
     return [formatter stringFromDate:self];
+    
+//    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+//    [dateFormat setDateFormat:@"yyyy년 MM월 dd일"];
+//    NSDate *date = [dateFormat dateFromString:dateStr];
 }
 
 - (NSDate *)omgAddDay:(NSInteger)day {

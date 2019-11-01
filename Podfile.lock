@@ -1,8 +1,8 @@
 PODS:
   - EAMiniAudioPlayerView (0.0.4)
-  - Realm (2.4.3):
-    - Realm/Headers (= 2.4.3)
-  - Realm/Headers (2.4.3)
+  - Realm (3.7.4):
+    - Realm/Headers (= 3.7.4)
+  - Realm/Headers (3.7.4)
   - StreamingKit (0.1.29)
   - Toast (3.1.0)
 
@@ -12,12 +12,19 @@ DEPENDENCIES:
   - StreamingKit
   - Toast (~> 3.1.0)
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - EAMiniAudioPlayerView
+    - Realm
+    - StreamingKit
+    - Toast
+
 SPEC CHECKSUMS:
   EAMiniAudioPlayerView: 4178a65699f5d1ffbee8ec2cf3ebaf4664dfa853
-  Realm: e08d60b0048ccccd3949c8c28a92c4db5712d7e9
+  Realm: a469bb59e33f9926102ccaea4349822c53b9117e
   StreamingKit: c329785aaef3ac142d4ae388345bfe1ed23cfd45
   Toast: 14a93686d6c8bfe2727afd342414e35660a8a1f3
 
 PODFILE CHECKSUM: 707eff0cdfcca6c617443bc655e6357b11eb2fd7
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.5.3

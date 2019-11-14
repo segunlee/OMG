@@ -6,6 +6,7 @@
 //  Copyright © 2017년 SegunLee. All rights reserved.
 //
 
+#import <MediaPlayer/MediaPlayer.h>
 #import <AVFoundation/AVFoundation.h>
 #import <Realm/Realm.h>
 #import <UIView+Toast.h>
@@ -21,12 +22,18 @@
 
 
 @interface OMGListTableViewController () <STKAudioPlayerDelegate, UITableViewDelegate, UITableViewDataSource>
+
+@property (nonatomic, weak) IBOutlet EAMiniAudioPlayerView *playerView;
+@property (nonatomic, weak) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UISlider *slider;
+@property (weak, nonatomic) IBOutlet UILabel *timeLabel;
+
+
 @property (nonatomic, strong) RLMRealm *realm;
 @property (nonatomic, strong) RLMResults<OMGModel *> *sources;
 @property (nonatomic, strong) STKAudioPlayer *audioPlayer;
-@property (nonatomic, weak) IBOutlet EAMiniAudioPlayerView *playerView;
-@property (nonatomic, weak) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) OMGModel *playedModel;
+
 @property (nonatomic, strong) NSTimer *timer;
 @end
 
@@ -46,13 +53,14 @@
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"CELL"];
     [self setupTimer];
-    [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
-    [self becomeFirstResponder];
     
     AVAudioSession *session = [AVAudioSession sharedInstance];
     [session setCategory:AVAudioSessionCategoryPlayback error:nil];
     [session setMode:AVAudioSessionModeDefault error:nil];
     [session setActive:YES error:nil];
+	
+	[[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
+	[self becomeFirstResponder];
     
     NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
     [center addObserver:self selector:@selector(sessionDidInterrupt:) name:AVAudioSessionInterruptionNotification object:session];
@@ -111,8 +119,7 @@
     }
 }
 
-- (void)remoteControlReceivedWithEvent:(UIEvent *)event
-{
+- (void)remoteControlReceivedWithEvent:(UIEvent *)event {
     if (event.type == UIEventTypeRemoteControl) {
         switch (event.subtype) {
             case UIEventSubtypeRemoteControlPlay:
@@ -124,8 +131,20 @@
                 [_audioPlayer pause];
                 break;
             case UIEventSubtypeRemoteControlNextTrack:
+			{
+				NSIndexPath *indexPath = self.tableView.indexPathForSelectedRow;
+				indexPath = [NSIndexPath indexPathForRow:indexPath.row+1 inSection:0];
+				[self.tableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionMiddle];
+				[self tableView:self.tableView didSelectRowAtIndexPath:indexPath];
+			}
                 break;
             case UIEventSubtypeRemoteControlPreviousTrack:
+			{
+				NSIndexPath *indexPath = self.tableView.indexPathForSelectedRow;
+				indexPath = [NSIndexPath indexPathForRow:indexPath.row-1 inSection:0];
+				[self.tableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionMiddle];
+				[self tableView:self.tableView didSelectRowAtIndexPath:indexPath];
+			}
                 break;
             default:
                 break;
@@ -145,6 +164,10 @@
     }
 }
 
+- (IBAction)sliderSeek:(UISlider *)sender {
+	[_audioPlayer seekToTime:sender.value];
+}
+
 #pragma mark - 
 - (void)playerViewHandle {
     __weak typeof(self) wSelf = self;
@@ -161,7 +184,7 @@
 }
 
 - (void)setupTimer {
-    _timer = [NSTimer timerWithTimeInterval:1 target:self selector:@selector(tick) userInfo:nil repeats:YES];
+    _timer = [NSTimer timerWithTimeInterval:0.1 target:self selector:@selector(tick) userInfo:nil repeats:YES];
     [[NSRunLoop currentRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
 }
 
@@ -172,6 +195,10 @@
         _playerView.textLabel.text = nil;
         _playerView.playProgress = 0;
         _playerView.downloadProgress = 0;
+		_slider.value = 0;
+		_slider.minimumValue = 0;
+		_slider.maximumValue = 0;
+		_timeLabel.text = nil;
         return;
     }
     
@@ -180,6 +207,10 @@
         _playerView.textLabel.text = nil;
         _playerView.playProgress = 0;
         _playerView.downloadProgress = 0;
+		_slider.value = 0;
+		_slider.minimumValue = 0;
+		_slider.maximumValue = 0;
+		_timeLabel.text = nil;
         return;
     }
     
@@ -187,10 +218,39 @@
     {
         _playerView.playProgress = _audioPlayer.progress / _audioPlayer.duration;
         _playerView.downloadProgress = _audioPlayer.progress / _audioPlayer.duration;
+		
+		[_slider setValue:_audioPlayer.progress animated:YES];
+		_slider.minimumValue = 0;
+		_slider.maximumValue = _audioPlayer.duration;
+		
+		NSString *left = [self getMMSSWithValue:_audioPlayer.progress];
+		NSString *right = [self getMMSSWithValue:_audioPlayer.duration];
+		
+		_timeLabel.text = [NSString stringWithFormat:@"%@ | %@", left, right];
+		
+		MPNowPlayingInfoCenter *infoCenter = [MPNowPlayingInfoCenter defaultCenter];
+		
+		NSInteger index = self.tableView.indexPathForSelectedRow.row;
+		
+		NSString *dpName = _sources[index].name;
+		if ([self getNameWithKey:_sources[index].date]) {
+			dpName = [self getNameWithKey:_sources[index].date];
+		}
+		
+		[infoCenter setNowPlayingInfo:@{
+			MPMediaItemPropertyTitle: dpName,
+			MPMediaItemPropertyArtist: @"MBC 옹꾸라",
+			MPNowPlayingInfoPropertyElapsedPlaybackTime: @(_audioPlayer.progress),
+			MPMediaItemPropertyPlaybackDuration: @(_audioPlayer.duration),
+			MPMediaItemPropertyArtwork: [[MPMediaItemArtwork alloc] initWithImage:[UIImage imageNamed:@"cover"]]
+		}];
     }
     else
     {
-        
+		_slider.value = 0;
+		_slider.minimumValue = 0;
+		_slider.maximumValue = 0;
+		_timeLabel.text = nil;
     }
     
     _playerView.playButton.selected = _audioPlayer.state == STKAudioPlayerStatePlaying;
@@ -238,6 +298,10 @@
 - (void) audioPlayer:(STKAudioPlayer*)audioPlayer didFinishPlayingQueueItemId:(NSObject*)queueItemId withReason:(STKAudioPlayerStopReason)stopReason andProgress:(double)progress andDuration:(double)duration {
     NSLog(@"%s", __PRETTY_FUNCTION__);
     
+	if (stopReason == STKAudioPlayerStopReasonNone && (_playedModel.lastPlayTime.doubleValue - 3) < duration && _audioPlayer.progress != 0) {
+		stopReason = STKAudioPlayerStopReasonEof;
+	}
+	
     switch (stopReason) {
         case STKAudioPlayerStopReasonEof:
         {
@@ -247,6 +311,11 @@
             _playedModel.leftPlayTime = @0;
             [_realm commitWriteTransaction];
             [self reloadTableViewWithSelection];
+			
+			NSIndexPath *indexPath = self.tableView.indexPathForSelectedRow;
+			indexPath = [NSIndexPath indexPathForRow:indexPath.row+1 inSection:0];
+			[self.tableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionMiddle];
+			[self tableView:self.tableView didSelectRowAtIndexPath:indexPath];
         }
             break;
         case STKAudioPlayerStopReasonError:

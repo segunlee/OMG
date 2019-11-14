@@ -15,6 +15,7 @@
 		672ADB731E78DFFF0080FCCF /* OMGListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 672ADB721E78DFFF0080FCCF /* OMGListTableViewController.m */; };
 		672ADB761E78E1EA0080FCCF /* OMGModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 672ADB751E78E1EA0080FCCF /* OMGModel.m */; };
 		672ADB791E78E4090080FCCF /* NSDate+OMG.m in Sources */ = {isa = PBXBuildFile; fileRef = 672ADB781E78E4090080FCCF /* NSDate+OMG.m */; };
+		67F18222237D27DC0074960A /* cover.png in Resources */ = {isa = PBXBuildFile; fileRef = 67F18221237D27DC0074960A /* cover.png */; };
 		E3B854A62529795C256FCE01 /* libPods-MBC_OMG.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B53881D05003C66C5814966 /* libPods-MBC_OMG.a */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		672ADB751E78E1EA0080FCCF /* OMGModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OMGModel.m; sourceTree = "<group>"; };
 		672ADB771E78E4090080FCCF /* NSDate+OMG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+OMG.h"; sourceTree = "<group>"; };
 		672ADB781E78E4090080FCCF /* NSDate+OMG.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+OMG.m"; sourceTree = "<group>"; };
+		67F18221237D27DC0074960A /* cover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cover.png; sourceTree = "<group>"; };
 		9B53881D05003C66C5814966 /* libPods-MBC_OMG.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MBC_OMG.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -88,6 +90,7 @@
 				672ADB771E78E4090080FCCF /* NSDate+OMG.h */,
 				672ADB781E78E4090080FCCF /* NSDate+OMG.m */,
 				672ADB631E78DF310080FCCF /* Main.storyboard */,
+				67F18221237D27DC0074960A /* cover.png */,
 				672ADB661E78DF310080FCCF /* Assets.xcassets */,
 				672ADB681E78DF310080FCCF /* LaunchScreen.storyboard */,
 				672ADB6B1E78DF310080FCCF /* Info.plist */,
@@ -162,6 +165,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -183,6 +187,7 @@
 				672ADB6A1E78DF310080FCCF /* LaunchScreen.storyboard in Resources */,
 				672ADB671E78DF310080FCCF /* Assets.xcassets in Resources */,
 				672ADB651E78DF310080FCCF /* Main.storyboard in Resources */,
+				67F18222237D27DC0074960A /* cover.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

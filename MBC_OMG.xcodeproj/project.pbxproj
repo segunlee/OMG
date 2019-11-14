@@ -22,7 +22,7 @@
 /* Begin PBXFileReference section */
 		1A9DF0196874AC1D8E613F3A /* Pods-MBC_OMG.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MBC_OMG.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MBC_OMG/Pods-MBC_OMG.debug.xcconfig"; sourceTree = "<group>"; };
 		2CB2A81D3AD4926D101FD544 /* Pods-MBC_OMG.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MBC_OMG.release.xcconfig"; path = "Pods/Target Support Files/Pods-MBC_OMG/Pods-MBC_OMG.release.xcconfig"; sourceTree = "<group>"; };
-		672ADB571E78DF310080FCCF /* MBC_OMG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MBC_OMG.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		672ADB571E78DF310080FCCF /* 라꾸옹.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "라꾸옹.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		672ADB5B1E78DF310080FCCF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		672ADB5D1E78DF310080FCCF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		672ADB5E1E78DF310080FCCF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -73,7 +73,7 @@
 		672ADB581E78DF310080FCCF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				672ADB571E78DF310080FCCF /* MBC_OMG.app */,
+				672ADB571E78DF310080FCCF /* 라꾸옹.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -135,7 +135,7 @@
 			);
 			name = MBC_OMG;
 			productName = MBC_OMG;
-			productReference = 672ADB571E78DF310080FCCF /* MBC_OMG.app */;
+			productReference = 672ADB571E78DF310080FCCF /* 라꾸옹.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -390,7 +390,7 @@
 				INFOPLIST_FILE = MBC_OMG/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "SGIOS.MBC-OMG";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "라꾸옹";
 			};
 			name = Debug;
 		};
@@ -403,7 +403,7 @@
 				INFOPLIST_FILE = MBC_OMG/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "SGIOS.MBC-OMG";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "라꾸옹";
 			};
 			name = Release;
 		};

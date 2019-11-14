@@ -360,6 +360,8 @@
     /*
         2010년 10월 18일~2011년 5월 8일
         http://podcastfile.imbc.gscdn.com/originaldata/dream/dream_20110203.mp3
+	 
+		http://www.mediafire.com/?9jkd34f83wm34
     */
     Toast(@"Sync Start");
     NSDate *startDate = [NSDate dateWithYear:2010 month:10 day:18];
